@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+*.wav
+*.flac
+model/
+eval/fleurs_ne_audio/
