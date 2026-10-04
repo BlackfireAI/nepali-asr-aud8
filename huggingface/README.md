@@ -45,6 +45,17 @@ readable text with sentence boundaries, which the XLS-R model cannot produce at 
 Pick this one when the output will be read by a person and you have a GPU. Pick XLS-R for
 throughput, CPU deployment, long audio, or when raw accuracy matters more than formatting.
 
+## Install
+
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install torch==2.13.0 transformers==4.57.6 soundfile==0.14.0 librosa==1.0.0
+```
+
+**Use transformers 4.x, in its own virtual environment.** On transformers 5.x this model
+does not raise an error, it silently produces nonsense output. A GPU is strongly
+recommended; this model runs below realtime on CPU.
+
 ## Usage
 
 Requires `transformers>=4.50,<5`. Tested on 4.57.6. On transformers 5.x this model

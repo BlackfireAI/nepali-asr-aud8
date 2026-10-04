@@ -32,12 +32,34 @@ formatting.
 
 ## Install
 
+Python 3.9 or newer. A GPU is strongly recommended, this model runs below realtime on CPU.
+
 ```bash
+python -m venv .venv
+source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-`transformers>=4.50,<5` is required. On transformers 5.x this model produces garbage
-output rather than failing loudly, so pin the version.
+That installs the exact versions this model was tested with:
+
+```
+torch 2.13.0 · transformers 4.57.6 · soundfile 0.14.0 · librosa 1.0.0
+```
+
+**The transformers version matters.** This model must run on transformers 4.x. On
+transformers 5.x it does not raise an error, it silently produces nonsense output. If you
+already have transformers 5 installed in another environment, use a separate virtual
+environment for this model rather than downgrading.
+
+Check it works:
+
+```bash
+python transcribe.py your_audio.wav
+```
+
+The model downloads from Hugging Face on first use, about 640 MB, and is cached
+afterwards. It loads custom model code from the repository, which is why
+`trust_remote_code=True` appears in the examples.
 
 ## Use
 
