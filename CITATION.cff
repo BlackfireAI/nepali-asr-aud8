@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this model, please cite it as below."
+title: "nepali-asr-aud8-325m: open Nepali speech recognition with punctuation"
+authors:
+  - name: "Blackfire A.I. Pvt. Ltd."
+url: "https://huggingface.co/BlackfireAI/nepali-asr-aud8-325m"
+repository-code: "https://github.com/BlackfireAI/nepali-asr-aud8"
+license: CC-BY-NC-4.0
+version: "1.0.0"
+date-released: "2026-10-12"
+keywords:
+  - nepali
+  - speech recognition
+  - asr
+  - speech-to-text
+  - devanagari
+  - punctuation
